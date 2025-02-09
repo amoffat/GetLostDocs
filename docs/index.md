@@ -1,4 +1,4 @@
-# Lost Docs
+# Get Lost Docs
 
 👋 Welcome to the Get Lost dev documentation. This will serve as your reference for all things required to build levels for Get Lost.
 
