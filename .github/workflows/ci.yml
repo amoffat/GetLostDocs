@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config --global user.name "CI Bot"
+          git config --global user.email "ci-bot@example.com"
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
@@ -27,4 +27,4 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: echo "docs_version=$(cat version.txt)" >> $GITHUB_ENV
-      - run: mike deploy --update-aliases $docs_version latest
+      - run: mike deploy --push --ignore-remote-status --update-aliases $docs_version latest
