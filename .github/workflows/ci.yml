@@ -27,4 +27,7 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: echo "docs_version=$(cat version.txt)" >> $GITHUB_ENV
-      - run: mike deploy --push --ignore-remote-status --update-aliases $docs_version latest
+      - name: Build Docs
+        run: |
+          git fetch origin gh-pages
+          mike deploy --push -update-aliases $docs_version latest
