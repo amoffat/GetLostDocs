@@ -1,0 +1,63 @@
+site_name: Lost Docs
+site_url: https://docs.getlost.gg/
+repo_url: https://github.com/amoffat/GetLostDocs
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/v4AAezkSEu
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/GetLostTheGame
+
+nav:
+  - 🏠 Home: index.md
+  - 📚 Tutorials:
+      - 🗺️ Map:
+          - tutorials/map/building-a-map.md
+      - 🔁 Interaction:
+          - tutorials/interaction/creating-sensors.md
+      - 🔊 Sound:
+          - tutorials/sound/playing-sound.md
+          - tutorials/sound/walk-sound.md
+          - tutorials/sound/area-sound.md
+  - 🎨 Art resources:
+      - art-assets/tilesets.md
+      - art-assets/sound-effects.md
+      - art-assets/music.md
+  - 📖 Glossary: glossary.md
+  - About: about.md
+
+theme:
+  language: en
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: black
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
