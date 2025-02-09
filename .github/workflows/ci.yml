@@ -30,4 +30,4 @@ jobs:
       - name: Build Docs
         run: |
           git fetch origin gh-pages
-          mike deploy --push -update-aliases $docs_version latest
+          mike deploy --push --update-aliases $docs_version latest
