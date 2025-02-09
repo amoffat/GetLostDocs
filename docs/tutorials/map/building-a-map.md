@@ -102,4 +102,4 @@ You're going to want to become familar with the basics of the Tiled map editor, 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL6wuv1YGOTFfxi8pdN2ghWmDqZqy3_XA7" frameborder="0" allowfullscreen></iframe>
 
-After that, you'll be ready to look at the other map tutorials in the Lost Docs.
+After that, you'll be ready to look at the other map tutorials in the Get Lost Docs.
