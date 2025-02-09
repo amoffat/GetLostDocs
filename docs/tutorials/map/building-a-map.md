@@ -1,6 +1,6 @@
-# 📐 Building a map
+# 📐 Getting set up with Tiled
 
-This tutorial will guide you through creating a basic Get Lost map in the [Tiled map editor.](https://www.mapeditor.org/) Tiled is a free and open source 2d map editor that can support many game engines, including Get Lost's custom engine. Most of your level design work will take place in Tiled.
+This tutorial will guide you through getting set up with the [Tiled map editor.](https://www.mapeditor.org/) Tiled is a popular free & open source 2d map editor that can support many game engines, including Get Lost's custom engine. Most of your level design work will take place in Tiled.
 
 ![assets](assets/tiled.png)
 

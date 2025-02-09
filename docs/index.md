@@ -4,7 +4,7 @@
 
 ## Getting started
 
-You'll probably first want to start with [building a map](tutorials/map/building-a-map.md).
+You'll probably first want to start with [getting set up with Tiled.](tutorials/map/building-a-map.md)
 
 ## Feedback
 
