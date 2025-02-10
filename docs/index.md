@@ -10,7 +10,7 @@ Are you here by mistake and just want to play Get Lost?
 
 ## New to Get Lost?
 
-If this is your first time here, please take a moment to [learn about the vision.](philosophy/what-is-it.md)
+If this is your first time here, please take a moment to [learn about the vision.](about.md)
 
 ## Getting started
 

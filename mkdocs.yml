@@ -14,7 +14,7 @@ extra:
 
 nav:
   - 🏠 Home: index.md
-  - 📚 Tutorials:
+  - 🎓 Tutorials:
       - 🗺️ Map:
           - tutorials/map/building-a-map.md
       - 🔁 Interaction:
@@ -23,11 +23,12 @@ nav:
           - tutorials/sound/playing-sound.md
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
+  - 📚 Reference:
+      - reference/universe.md
   - 🎨 Art resources:
       - art-assets/tilesets.md
       - art-assets/sound-effects.md
       - art-assets/music.md
-  - 📖 Glossary: glossary.md
   - about.md
 
 theme:

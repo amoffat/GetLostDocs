@@ -1,9 +1,9 @@
 # ℹ️ What is Get Lost?
 
-Get Lost is an engine, a platform, and a web game. The goal is to make it easy for creators to tell stories within a larger game experience. Creators make self-contained levels and then publish those levels into the Get Lost Universe (1). Players can then play those levels on their journey through [the game.](what-is-it.md#the-game)
+Get Lost is an engine, a platform, and a web game. The goal is to make it easy for creators to tell stories within a larger game experience. Creators make self-contained levels and then publish those levels into the Get Lost Universe (1). Players can then play those levels on their journey through [the game.](#the-game)
 { .annotate }
 
-1. The Get Lost Universe is the total collection of all levels in Get Lost. Levels in the Universe are connected so that an exit of one level attaches to the entry of another level.
+1. The Get Lost Universe is the total collection of all levels in Get Lost. Levels in the Universe are connected so that an exit of one level attaches to the entry of another level. [Learn more](reference/universe.md)
 
 ## ✨ The vision
 
@@ -39,11 +39,11 @@ The platform is what lets creators publish their level into the Get Lost Univers
 
 ### 🎮 The game
 
-The game is the player's cohesive experience through this universe of levels. Every level published by an artist is [stitched into the universe](../reference/level-attachments.md) by connecting it with other levels. And because all levels must have at least 1 entrypoint and at least 2 exits, there will always be more places to visit&mdash;no dead ends.
+The game is the player's cohesive experience through this universe of levels. Every level published by an artist is [stitched into the universe](./reference/universe.md) by connecting it with other levels. And because all levels must have at least 1 entrypoint and at least 2 exits, there will always be more places to visit&mdash;no dead ends.
 
 There is only one player avatar (1) that moves through levels, and players can make choices in levels that affect their traits. For example, if a player steals money from an NPC, the level may decrease their "trustworthiness" trait. Other levels can check this trait and give players different experiences.
 { .annotate }
 
 Items are another way for artists to collaborate across levels. Items that are picked up in one level can be used in other levels. For example, if a fire level gives a player a magic fire wand, and later they find themselves in an ice level, they might be able to melt a frozen door with it.
 
-1. One player avatar, but several possible variations. ![Player variations](../assets/player-variations.png)
+1. One player avatar, but several possible variations. ![Player variations](assets/player-variations.png)
