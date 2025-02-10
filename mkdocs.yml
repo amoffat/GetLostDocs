@@ -28,7 +28,7 @@ nav:
       - art-assets/sound-effects.md
       - art-assets/music.md
   - 📖 Glossary: glossary.md
-  - philosophy/vision.md
+  - about.md
 
 theme:
   language: en
