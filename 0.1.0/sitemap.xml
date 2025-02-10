@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.getlost.gg/0.1.0/</loc>
-         <lastmod>2025-02-09</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.getlost.gg/0.1.0/about/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/glossary/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/art-assets/music/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/art-assets/sound-effects/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/art-assets/tilesets/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.getlost.gg/0.1.0/philosophy/vision/</loc>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/tutorials/interaction/creating-sensors/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/tutorials/map/building-a-map/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/tutorials/sound/area-sound/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/tutorials/sound/playing-sound/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
     <url>
          <loc>https://docs.getlost.gg/0.1.0/tutorials/sound/walk-sound/</loc>
-         <lastmod>2025-02-09</lastmod>
+         <lastmod>2025-02-10</lastmod>
     </url>
 </urlset>
