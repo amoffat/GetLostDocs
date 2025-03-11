@@ -16,7 +16,9 @@ nav:
   - 🏠 Home: index.md
   - 🎓 Tutorials:
       - 🗺️ Map:
-          - tutorials/map/building-a-map.md
+          - tutorials/map/starting-dev-env.md
+      - 🍎 Physics:
+          - tutorials/physics/making-collisions.md
       - 🔁 Interaction:
           - tutorials/interaction/creating-sensors.md
       - 🔊 Sound:
@@ -24,12 +26,15 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
-      - reference/universe.md
+      - reference/multiverse.md
+      - reference/special-layers.md
   - 🎨 Art resources:
       - art-assets/tilesets.md
       - art-assets/sound-effects.md
       - art-assets/music.md
+  - monetization.md
   - about.md
+  - faq.md
 
 theme:
   language: en
