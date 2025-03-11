@@ -32,17 +32,17 @@ jobs:
           git fetch origin gh-pages
           mike deploy --push --update-aliases $docs_version latest
 
-      - name: Discord notification
+  notify:
+    name: Send Discord Notification
+    needs: pages-build-deployment
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send Discord Notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_EMBEDS: >
-            {
-              "embeds": [{
-                "title": "Get Lost Docs",
-                "url": "https://docs.getlost.gg/${{ env.docs_version }}/",
-                "color": 5814783
-              }]
-            }
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: "Version $docs_version of the docs has been deployed."
+          DOCS_VERSION: ${{ env.docs_version }}
+        run: python3 scripts/send_discord_notification.py
