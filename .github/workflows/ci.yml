@@ -35,14 +35,12 @@ jobs:
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_EMBEDS: >-
-            ${{ toJson([
-              {
-                "title": "Get Lost Docs",
-                "url": "https://docs.getlost.gg/${{ env.docs_version }}/",
-                "color": 5814783
-              }
-            ]) }}
+          DISCORD_EMBEDS: >
+            {
+              "title": "Get Lost Docs",
+              "url": "https://docs.getlost.gg/${{ env.docs_version }}/",
+              "color": 5814783
+            }
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: "Version $docs_version of the docs has been deployed."
