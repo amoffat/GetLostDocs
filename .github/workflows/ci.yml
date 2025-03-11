@@ -37,7 +37,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_EMBEDS: >
             {
-              "embed": [{
+              "embeds": [{
                 "title": "Get Lost Docs",
                 "url": "https://docs.getlost.gg/${{ env.docs_version }}/",
                 "color": 5814783
