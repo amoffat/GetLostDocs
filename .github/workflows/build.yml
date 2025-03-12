@@ -31,7 +31,7 @@ jobs:
         id: tag-commit
         run: |
           git tag "$docs_version" "${{github.ref_name}}"
-          git push origin "$version" || true
+          git push origin "$docs_version" --force
       - name: Build Docs
         run: |
           git fetch origin gh-pages
