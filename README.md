@@ -21,5 +21,5 @@ The instructions below are only if you want to edit this documentation. It is no
 - Commit changes
 - `git checkout main`
 - Incorporate the change into `main`'s history with `git rebase $branch_name`
-- Rebuild the `gh-pages` branch at that version with `mike deploy --push $version`
+- Rebuild the `gh-pages` branch at that version (and all subsquent verions, sadface) with `mike deploy --push $version`
 - Sync remote `git push origin HEAD`

@@ -4,12 +4,11 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
@@ -28,6 +27,11 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: echo "docs_version=$(cat version.txt)" >> $GITHUB_ENV
+      - name: Tag commit
+        id: tag-commit
+        run: |
+          git tag "$docs_version" "${{github.ref_name}}"
+          git push origin "$version" || true
       - name: Build Docs
         run: |
           git fetch origin gh-pages
