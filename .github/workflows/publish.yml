@@ -58,4 +58,4 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DOCS_VERSION: ${{ env.docs_version }}
-        run: python3 scripts/send_discord_notification.py
+        run: python3 scripts/discord.py
