@@ -1,13 +1,14 @@
-name: ci
+name: build
 on:
   push:
     branches:
       - main
+
 permissions:
   contents: write
-  pages: write
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,18 +32,3 @@ jobs:
         run: |
           git fetch origin gh-pages
           mike deploy --push --update-aliases $docs_version latest
-
-  notify:
-    name: Send Discord Notification
-    needs: pages-build-deployment
-    runs-on: ubuntu-latest
-    if: success()
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Send Discord Notification
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DOCS_VERSION: ${{ env.docs_version }}
-        run: python3 scripts/send_discord_notification.py
