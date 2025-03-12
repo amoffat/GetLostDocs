@@ -32,3 +32,19 @@ jobs:
         run: |
           git fetch origin gh-pages
           mike deploy --push --update-aliases $docs_version latest
+
+  trigger:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Trigger publish workflow
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: "publish.yml",
+              ref: "gh-pages"
+            })
