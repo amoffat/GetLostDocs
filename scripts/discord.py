@@ -29,12 +29,13 @@ def get_changes():
 
 
 def send_notification():
-    webhook_url = os.getenv("DISCORD_WEBHOOK")
-    docs_version = os.getenv("DOCS_VERSION")
+    webhook_url = os.environ["DISCORD_WEBHOOK"]
+    if not webhook_url:
+        raise RuntimeError("No Discord webhook URL found.")
 
-    if not webhook_url or not docs_version:
-        print("Missing DISCORD_WEBHOOK or DOCS_VERSION environment variables.")
-        return
+    version = os.environ["VERSION"]
+    if not version:
+        raise RuntimeError("No version found.")
 
     changes = get_changes()
     fields = [
@@ -47,8 +48,8 @@ def send_notification():
     ]
 
     embed = {
-        "title": f"📚 Docs v{docs_version} Deployed!",
-        "url": f"https://docs.getlost.gg/{docs_version}/",
+        "title": f"📚 Docs v{version} Deployed!",
+        "url": f"https://docs.getlost.gg/{version}/",
         "description": "A new version of the documentation is now live!",
         "color": 5814783,
         "fields": fields,

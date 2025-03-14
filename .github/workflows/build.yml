@@ -30,16 +30,16 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install -r requirements.txt
-      - run: echo "docs_version=$(cat version.txt)" >> $GITHUB_ENV
+      - run: echo "version=$(cat version.txt)" >> $GITHUB_ENV
       - name: Tag commit
         id: tag-commit
         run: |
-          git tag "$docs_version" "${{github.ref_name}}"
-          git push origin "$docs_version" --force
+          git tag "$version" "${{github.ref_name}}"
+          git push origin "$version" --force
       - name: Build Docs
         run: |
           git fetch origin gh-pages
-          mike deploy --push --update-aliases $docs_version latest
+          mike deploy --push --update-aliases $version latest
 
   trigger:
     runs-on: ubuntu-latest

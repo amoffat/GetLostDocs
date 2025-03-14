@@ -52,10 +52,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: echo "docs_version=$(cat version.txt)" >> $GITHUB_ENV
+      - run: echo "version=$(cat version.txt)" >> $GITHUB_ENV
 
       - name: Send Discord Notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DOCS_VERSION: ${{ env.docs_version }}
+          VERSION: ${{ env.version }}
         run: python3 scripts/discord.py
