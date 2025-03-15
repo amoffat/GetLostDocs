@@ -26,6 +26,7 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - reference/upgrading.md
       - reference/multiverse.md
       - reference/special-layers.md
   - 🎨 Art resources:
@@ -41,6 +42,9 @@ theme:
   name: material
   logo: assets/logo.png
   favicon: assets/logo.png
+  features:
+    - content.code.copy
+    - content.code.select
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -69,7 +73,14 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - pymdownx.keys
   - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
