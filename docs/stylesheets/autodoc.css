@@ -1,0 +1,116 @@
+/*
+ * This CSS file is used to style the auto-generated documentation for the
+ * Assemblyscript functions of our api.
+ */
+
+/* Define CSS variables for light and dark themes */
+:root {
+  --background-light: white;
+  --background-dark: #2c3e50;
+  --text-light: #2c3e50;
+  --text-dark: #ecf0f1;
+  --highlight-light: #e3f2fd;
+  --highlight-dark: #34495e;
+  --arg-background-light: #eef5ff;
+  --arg-background-dark: #3b5998;
+  --return-background-light: #f1f8e9;
+  --return-background-dark: #2e7d32;
+  --border-light: #ddd;
+  --border-dark: #555;
+  --function-name-light: #2c3e50;
+  --function-name-dark: #ecf0f1;
+  --arg-name-light: #007acc;
+  --arg-name-dark: #66b2ff;
+  --return-type-light: #388e3c;
+  --return-type-dark: #66bb6a;
+}
+
+/* Apply theme based on the data-md-color-scheme attribute */
+[data-md-color-scheme="default"] {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --highlight: var(--highlight-light);
+  --arg-background: var(--arg-background-light);
+  --return-background: var(--return-background-light);
+  --border: var(--border-light);
+  --function-name-color: var(--function-name-light);
+  --arg-name-color: var(--arg-name-light);
+  --return-type-color: var(--return-type-light);
+}
+
+[data-md-color-scheme="slate"] {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --highlight: var(--highlight-dark);
+  --arg-background: var(--arg-background-dark);
+  --return-background: var(--return-background-dark);
+  --border: var(--border-dark);
+  --function-name-color: var(--function-name-dark);
+  --arg-name-color: var(--arg-name-dark);
+  --return-type-color: var(--return-type-dark);
+}
+
+.function-container {
+  background: var(--background);
+  padding: 1.25em;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.function-description {
+  margin-top: 0.625em;
+  color: var(--text);
+  font-size: 1em;
+}
+
+.section-title {
+  font-size: 1.125em;
+  margin-top: 0.9375em;
+  color: var(--text);
+  font-weight: bold;
+  border-bottom: 0.125em solid var(--border);
+  padding-bottom: 0.3125em;
+}
+
+.arguments {
+  margin-top: 0.625em;
+  padding: 0;
+  list-style: none;
+}
+
+.arguments li {
+  background: var(--arg-background);
+  margin-bottom: 0.5em;
+  padding: 0.625em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arg-name {
+  font-weight: bold;
+  color: var(--arg-name-color);
+}
+
+.arg-description {
+  color: var(--text);
+  font-size: 0.875em;
+  flex: 1;
+  margin-left: 0.625em;
+}
+
+.return-container {
+  background: var(--return-background);
+  padding: 0.625em;
+  margin-top: 0.625em;
+}
+
+.return-type {
+  font-weight: bold;
+  color: var(--return-type-color);
+}
+
+.return-description {
+  color: var(--text);
+  font-size: 0.875em;
+}

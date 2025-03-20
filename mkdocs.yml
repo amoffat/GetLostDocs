@@ -1,6 +1,8 @@
 site_name: Get Lost Docs
 site_url: https://docs.getlost.gg/
 repo_url: https://github.com/amoffat/GetLostDocs
+extra_css:
+  - stylesheets/autodoc.css
 extra:
   version:
     provider: mike
@@ -73,6 +75,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - md_in_html
   - pymdownx.keys
   - md_in_html
   - pymdownx.highlight:
