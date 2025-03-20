@@ -14,7 +14,7 @@ If this is your first time here, please take a moment to [learn about the vision
 
 ## Getting started
 
-So you want to build a level? You'll probably first want to start with [starting your development environment.](tutorials/map/starting-dev-env.md)
+So you want to build a level? You'll probably first want to start with [starting your development environment.](reference/starting-dev-env.md)
 
 ## Feedback
 

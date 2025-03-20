@@ -17,8 +17,6 @@ extra:
 nav:
   - 🏠 Home: index.md
   - 🎓 Tutorials:
-      - 🗺️ Map:
-          - tutorials/map/starting-dev-env.md
       - 🍎 Physics:
           - tutorials/physics/making-collisions.md
       - 🔁 Interaction:
@@ -28,6 +26,7 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - reference/starting-dev-env.md
       - reference/upgrading.md
       - reference/multiverse.md
       - reference/special-layers.md
