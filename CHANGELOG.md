@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 -
+
+- Devcontainer setup
+
 ## 0.4.0 - 3/19/25
 
 - Fleshing out the dev env tutorial
