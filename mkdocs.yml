@@ -79,6 +79,7 @@ plugins:
       is_video: True
       video_muted: True
       video_controls: False
+      video_loop: True
       video_autoplay: True
       css_style:
         width: 100%
