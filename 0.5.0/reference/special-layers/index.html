@@ -163,43 +163,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
       <div class="md-header__source">
         <a href="https://github.com/amoffat/GetLostDocs" title="Go to repository" class="md-source" data-md-component="source">
@@ -1308,7 +1271,7 @@
   
 
 
-<h1 id="special-layers">🧅 Special layers</h1>
+<div><h1 id="special-layers">🧅 Special layers</h1>
 <p class="annotate">In the Tiled map editor, Get Lost uses special layer names that can have different effects in the engine. For example, if you create a layer named <code>zooms</code>, any primitive object (1) will designate a zoom area. When the player walks through this zoom area, the camera will zoom in or out, based on the properties you've assigned to the primitive object.</p>
 <ol>
 <li>A primitive object is a rectangle or ellipse. Arbitrary polygon objects are not yet supported.</li>
@@ -1333,7 +1296,7 @@
 <h3 id="sounds">sounds</h3>
 <h3 id="zooms">zooms</h3>
 <h2 id="layer-groups">Layer groups</h2>
-<p>Layer groups are useful to logically group together layers based on their contents. They have no functional effect on the Get Lost engine, meaning they won't influence the behavior of the game. It's only for your own personal organization. The only thing they do effect in the engine is the authoritative naming of the layers. When Get Lost loads your Tiled map, it uses the layer names as they're given. Except if the layer is in a group. Then it is prefixed with the group name. For example, a layer named "trees1" in the "trees" layer group becomes "trees/trees1".</p>
+<p>Layer groups are useful to logically group together layers based on their contents. They have no functional effect on the Get Lost engine, meaning they won't influence the behavior of the game. It's only for your own personal organization. The only thing they do effect in the engine is the authoritative naming of the layers. When Get Lost loads your Tiled map, it uses the layer names as they're given. Except if the layer is in a group. Then it is prefixed with the group name. For example, a layer named "trees1" in the "trees" layer group becomes "trees/trees1".</p></div>
 
 
 

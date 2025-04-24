@@ -163,43 +163,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
       <div class="md-header__source">
         <a href="https://github.com/amoffat/GetLostDocs" title="Go to repository" class="md-source" data-md-component="source">
@@ -1328,7 +1291,7 @@
   
 
 
-<h1 id="creating-dialogue">💬 Creating dialogue</h1>
+<div><h1 id="creating-dialogue">💬 Creating dialogue</h1>
 <p>Dialogue is an important aspect of your Get Lost level. Through dialogue, you can reveal parts of your story that are difficult to tell visually. Get Lost dialogue can be dynamic, changing with time of day, items that the player has, or choices that they've made.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1336,15 +1299,12 @@
 </div>
 <p>We use <a href="https://twinery.org/">Twine</a> to create dialogue, and it comes builtin to the Get Lost development environment. This means you don't need to install anything.</p>
 <p>In this tutorial, we'll add dialogue for a new NPC named Omar.</p>
-<video autoplay muted loop>
-  <source src="/tutorials/dialogue/creating-dialogue/omar.mp4" type="video/mp4">
-</video>
-
+<p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" muted autoplay alt="type:video"><source src="omar.mp4" type="video/mp4"></source></video></div></p>
 <h2 id="fire-up-twine">🚀 Fire up Twine</h2>
 <p>Go to your <code>Ports</code> tab in VSCode and open the <code>Twine - Dialogue</code> port in the browser. This will launch the Twine software.</p>
-<p><img alt="twine port" src="twine-port.png" /></p>
+<p><img alt="twine port" src="twine-port.png"></p>
 <p>Once your browser tab opens, you should see the Twine interface. You'll see an existing story named "Level", like the following:</p>
-<p><img alt="twine-level" src="twine-level.png" /></p>
+<p><img alt="twine-level" src="twine-level.png"></p>
 <p>Double click on the story to open it for editing.</p>
 <h2 id="add-a-new-passage">🆕 Add a new passage</h2>
 <p class="annotate">Since our Omar NPC will be totally new, there are no existing passages(1) to attach to, so we need to create some new nodes. Start by finding the <code>Start</code> passage(2) and double clicking it to open it.</p>
@@ -1352,17 +1312,17 @@
 <li>A passage is what Twine calls a dialogue node in the story.</li>
 <li>The start passage has a little green spaceship attached to it. 🚀</li>
 </ol>
-<p><img alt="start-node" src="start-node.png" /></p>
+<p><img alt="start-node" src="start-node.png"></p>
 <p>Now add a link for Omar by adding the following line: <code>[[Talk to Omar|Omar]]</code>. Once you've done that, a new passage automatically appears in the workspace:</p>
-<p><img alt="tt-omar" src="talk-to-omar.png" /></p>
+<p><img alt="tt-omar" src="talk-to-omar.png"></p>
 <h2 id="add-new-dialogue">🗪 Add new dialogue</h2>
 <p>The new Omar passage has no content, which is why it has a dashed border. Double click it so we can add some content. The content that we'll add will be what Omar says when we interact with him. Write anything you want.</p>
-<p><img alt="omar-text" src="omar-text.png" /></p>
+<p><img alt="omar-text" src="omar-text.png"></p>
 <p class="annotate">We also want all conversations with Omar have the title "Omar" at the top(1). We can do this by putting a tag on this passage. Click the "+ Tag" button, then select "New Tag", set "Tag name" to "Omar" and optionally set a color. Then click "+ Add".</p>
 <ol>
-<li><img alt="omar-title" src="omar-title.png" /></li>
+<li><img alt="omar-title" src="omar-title.png"></li>
 </ol>
-<p><img alt="omar-tag" src="omar-tag.png" /></p>
+<p><img alt="omar-tag" src="omar-tag.png"></p>
 <p>This will make it so that the all interactions with Omar have the title "Omar" when you're playing the game.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1374,8 +1334,8 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[[How did I get here?]]
 </span></code></pre></div>
 <p>When you add this text to your passage, Twine will automatically create 2 new connected passages.</p>
-<p><img alt="omar-choices" src="omar-choices.png" /></p>
-<p>Now repeat the process with the new passages&mdash;write new dialogue, then create new responses with links.</p>
+<p><img alt="omar-choices" src="omar-choices.png"></p>
+<p>Now repeat the process with the new passages—write new dialogue, then create new responses with links.</p>
 <h2 id="add-logic">🧩 Add logic</h2>
 <p class="annotate">Twine nodes support a basic programming language(1). It's not as powerful as a real programming language, like Javascript or Python, but most of the time it's enough to do what you want. It's called <a href="../../../reference/dialogue/sugarcube/"><code>SugarCube.</code></a></p>
 <ol>
@@ -1385,14 +1345,14 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;&lt;if visited() &gt; 1&gt;&gt;
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Welcome back.
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;&lt;else&gt;&gt;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  What up, I&#39;m Omar.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  What up, I'm Omar.
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&lt;&lt;/if&gt;&gt;
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>[[What is this place?]]
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>[[How did I get here?]]
 </span></code></pre></div>
 <p>Now, if it's the first time the player has interacted with Omar, they'll be presented with:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What up, I&#39;m Omar.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>What up, I'm Omar.
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[[What is this place?]]
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[[How did I get here?]]
@@ -1421,25 +1381,25 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">sensorName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">entered</span><span class="o">:</span><span class="w"> </span><span class="kt">bool</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">initiator</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;player&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">initiator</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">"player"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;flame&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"flame"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nx">dialogue</span><span class="p">.</span><span class="nx">stage_Fire</span><span class="p">(</span><span class="nx">entered</span><span class="p">);</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;knight&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"knight"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nx">dialogue</span><span class="p">.</span><span class="nx">stage_Knight</span><span class="p">(</span><span class="nx">entered</span><span class="p">);</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;well&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"well"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nx">dialogue</span><span class="p">.</span><span class="nx">stage_Well</span><span class="p">(</span><span class="nx">entered</span><span class="p">);</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;nazar&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"nazar"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="nx">dialogue</span><span class="p">.</span><span class="nx">stage_Nazar</span><span class="p">(</span><span class="nx">entered</span><span class="p">);</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;water&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"water"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nx">inWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">entered</span><span class="p">;</span>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="c1">// ...</span>
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>We add a new <code>else if</code> section for a new sensor:</p>
-<div class="language-typescript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;omar&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sensorName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"omar"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">dialogue</span><span class="p">.</span><span class="nx">passage_Omar</span><span class="p">();</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -1449,7 +1409,7 @@
 </ol>
 <h3 id="staging-the-dialogue">👉 Staging the dialogue</h3>
 <p>Use this option if you want to give the player freedom about when the dialogue is displayed. The code looks basically the same as forcing dialogue, except we use <code>dialogue.stage_Omar(entered)</code> instead of <code>dialogue.passage_Omar()</code>. What this does is it gives the player an <code>Interact</code> button when they enter the sensor. When they click the button, the <code>buttonPressEvent</code> fires, and <code>dialogue.dispatch(passageId)</code> is called to show your Omar passage.</p>
-<p><img alt="interact-button" src="interact-button.png" /></p>
+<p><img alt="interact-button" src="interact-button.png"></p>
 <h2 id="play-your-changes">🕹️ Play your changes</h2>
 <p>Each time you make a change in Twine, it autosaves and reloads the level preview. The typical workflow involves going back and forth between the level preview tab and the twine tab, making changes, then trying those changes.</p>
 <div class="admonition info">
@@ -1464,7 +1424,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Any changes that you make to the generated dialogue file will be overwritten when the file is regenerated. It is not designed to be edited.</p>
-</div>
+</div></div>
 
 
 
