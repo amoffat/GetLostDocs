@@ -80,6 +80,8 @@ plugins:
       video_muted: True
       video_controls: False
       video_autoplay: True
+      css_style:
+        width: 100%
 
 markdown_extensions:
   - admonition
