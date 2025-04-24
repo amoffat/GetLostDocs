@@ -74,6 +74,13 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
+plugins:
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: False
+      video_autoplay: True
+
 markdown_extensions:
   - admonition
   - pymdownx.details

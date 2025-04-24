@@ -10,9 +10,7 @@ We use [Twine](https://twinery.org/) to create dialogue, and it comes builtin to
 
 In this tutorial, we'll add dialogue for a new NPC named Omar.
 
-<video autoplay muted loop>
-  <source src="/tutorials/dialogue/creating-dialogue/omar.mp4" type="video/mp4">
-</video>
+![type:video](./creating-dialogue/omar.mp4)
 
 ## 🚀 Fire up Twine
 
