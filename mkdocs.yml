@@ -17,8 +17,12 @@ extra:
 nav:
   - 🏠 Home: index.md
   - 🎓 Tutorials:
+      - 🗺️ Map:
+          - tutorials/map/resetting.md
       - 🍎 Physics:
           - tutorials/physics/making-collisions.md
+      - 🗣 Dialogue:
+          - tutorials/dialogue/creating-dialogue.md
       - 🔁 Interaction:
           - tutorials/interaction/creating-sensors.md
       - 🔊 Sound:
@@ -26,6 +30,8 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - 🗣 Dialogue:
+          - reference/dialogue/sugarcube.md
       - reference/starting-dev-env.md
       - reference/upgrading.md
       - reference/multiverse.md
@@ -34,7 +40,6 @@ nav:
       - art-assets/tilesets.md
       - art-assets/sound-effects.md
       - art-assets/music.md
-  - monetization.md
   - about.md
   - faq.md
 

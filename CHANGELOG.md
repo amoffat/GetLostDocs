@@ -1,8 +1,11 @@
 # Changelog
 
-## 0.5.0 -
+## 0.5.0 - 4/24/25
 
 - Devcontainer setup
+- Resetting the map stub
+- Creating dialogue tutorial
+- Sugarcube reference
 
 ## 0.4.0 - 3/19/25
 
