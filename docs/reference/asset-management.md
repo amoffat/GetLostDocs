@@ -71,7 +71,7 @@ sequenceDiagram
 
     It's important to verify that each collaborator is in compliance with the licenses of your restricted assets. Failure to do could be a breach of your license agreement with the artist, causing your level to be flagged and possibly resulting in legal action from the artist against you. Please consult with a lawyer if you have questions or concerns.
 
-## How-to
+## 🤔 How-to
 
 ### Import the assets key
 
