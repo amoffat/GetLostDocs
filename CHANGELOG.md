@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.9.0
+## 0.9.0 - 4/30/25
 
 - [Restricted asset management](https://docs.getlost.gg/0.9.0/reference/upgrading)
 
