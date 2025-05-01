@@ -27,6 +27,23 @@ This solution gives you a relatively seamless experience when handling the asset
 
 A typical workflow for a new project with collaborators would look like this:
 
+1. You create a public Github repo for your level from the [Get Lost level template.](https://github.com/amoffat/getlost-level-template)
+1. You clone the repo locally and start a VSCode dev container.
+1. The dev container generates an `assets.key` file that will be used to encrypt/decrypt art assets.
+1. You add your restricted assets to the special `level/art/restricted/` folder.
+1. You commit the assets, which automatically encrypts them.
+1. You push the encrypted assets to the public Github repo.
+1. Your collaborator clones the level repo from Github.
+1. When their local dev container starts, they get a message that the repo contains encrypted assets.
+1. They reach out to you, the owner, for access to the assets key to decrypt the assets.
+1. After verifying that they are in compliance with the assets' license(s), you share the `assets.key` file with them.
+1. They import the key into their local repo, decrypting the assets in the `level/art/restricted/` folder.
+1. They now have a fully-decrypted repo, and can work on the level without limitation.
+
+!!! warning
+
+    It's important to verify that each collaborator is in compliance with the licenses of your restricted assets. Failure to do could be a breach of your license agreement with the artist, causing your level to be flagged and possibly resulting in legal action from the artist against you. Please consult with a lawyer if you have questions or concerns.
+
 ```mermaid
 sequenceDiagram
     participant You
@@ -55,27 +72,11 @@ sequenceDiagram
     Collaborator->>Collaborator: Work freely on level
 ```
 
-1. You create a public Github repo for your level from the [Get Lost level template.](https://github.com/amoffat/getlost-level-template)
-1. You clone the repo locally and start a VSCode dev container.
-1. You add your restricted assets to the special `level/art/restricted/` folder.
-1. You commit the assets, which automatically encrypts them.
-1. You push the encrypted assets to the public Github repo.
-1. Your collaborator clones the level repo from Github.
-1. When their local dev container starts, they get a message that the repo contains encrypted assets.
-1. They reach out to you, the owner, for access to the assets key to decrypt the assets.
-1. After verifying that they are in compliance with the assets' license(s), you share the decryption key with them.
-1. They import the key into their local repo, decrypting the assets in the `level/art/restricted/` folder.
-1. They now have a fully-decrypted repo, and can work on the level without limitation.
-
-!!! warning
-
-    It's important to verify that each collaborator is in compliance with the licenses of your restricted assets. Failure to do could be a breach of your license agreement with the artist, causing your level to be flagged and possibly resulting in legal action from the artist against you. Please consult with a lawyer if you have questions or concerns.
-
 ## 🤔 How-to
 
 ### Import the assets key
 
-If you are joining an existing level project, the assets are already encrypted, and you need to import assets encryption key in order to unlock them. Get this key from the repository owner by reaching out to them. Once you have it, press ++ctrl+shift+b++ to bring up the VSCode tasks. Then select `Import assets key`:
+If you are joining an existing level project, the assets are already encrypted, and you need to import assets encryption key in order to unlock them. Get this key from the repository owner by reaching out to them. Once you have it, press ++ctrl+shift+b++ to bring up the VSCode tasks. Then select `Import Assets Key`:
 
 ![assets-key](./assets/import-key.png)
 
@@ -88,3 +89,21 @@ When you first create your level repo and start up the development environment, 
 !!! warning
 
     If you lose this file, your assets will be permanently encrypted and unrecoverable. It's a good idea to save your generated `assets.key` file in your password manager, so this doesn't happen.
+
+### Deploying your level
+
+Since your assets are encrypted in your level repo, Github somehow needs to be able decrypt them when you want to deploy your level to the Get Lost game. This is accomplished by putting the contents of `assets.key` as a Github secret.
+
+First go to your level repo's settings, then click `Secrets and variables`:
+
+![gh-settings](./assets/gh-settings.png)
+
+Now click `New repository secret`:
+
+![new-secret](./assets/new-secret.png)
+
+Finally, create a new secret named `ASSETS_KEY`, paste the contents of your `assets.key` file, then click `Add secret`:
+
+![assets-key](./assets/assets-key.png)
+
+That's it! Now publishing your level will work seamlessly, as Github can now decrypt your restricted assets before deploying them to the game.
