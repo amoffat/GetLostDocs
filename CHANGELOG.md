@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- [Restricted asset management](https://docs.getlost.gg/0.9.0/reference/upgrading)
+
 ## 0.5.0 - 4/24/25
 
 - Devcontainer setup

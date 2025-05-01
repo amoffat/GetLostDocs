@@ -30,6 +30,7 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - reference/asset-management.md
       - 🗣 Dialogue:
           - reference/dialogue/sugarcube.md
       - reference/starting-dev-env.md
@@ -87,7 +88,11 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - md_in_html
   - pymdownx.keys
