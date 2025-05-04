@@ -1,7 +1,8 @@
 # Changelog
 
-## 0.9.0 - 4/30/25
+## 0.9.0 - 5/3/25
 
+- Add Docker on Windows note for starting dev env
 - [Restricted asset management](https://docs.getlost.gg/0.9.0/reference/asset-management/)
 
 ## 0.5.0 - 4/24/25
