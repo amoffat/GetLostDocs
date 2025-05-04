@@ -1,4 +1,4 @@
-# ⏫️ Upgrading
+# ⏫️ Upgrading your level
 
 Upgrading your level is a key part of level development. It's how you stay up to date with the latest changes and features.
 
@@ -35,7 +35,7 @@ Whether you're developing in a hosted development environment on Github Codespac
 
 Press ++ctrl+shift+b++ to open the command palette for build tasks. Then select `Upgrade Level`.
 
-![Upgrade level menu](../assets/upgrade-level-menu.png)
+![Upgrade level menu](./assets/upgrade-level-menu.png)
 
 Once the script completes, you're done!
 
@@ -66,7 +66,7 @@ Sometimes the upgrade script will replace files in `/.devcontainer/` which are u
 
 Open the command palette with ++ctrl+shift+p++, then type `Rebuild container` and select `Dev Containers: Rebuild Container`
 
-![Rebuild devcontainer](../assets/rebuild-devcontainer.png)
+![Rebuild devcontainer](./assets/rebuild-devcontainer.png)
 
 The devcontainer will rebuild, and everything should be in a pristine state.
 

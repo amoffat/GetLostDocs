@@ -2,11 +2,10 @@
 
 Get Lost gives you a level template that you can (and should) use to start building levels quickly. It comes with a premade demo map, some sample level code, and public domain assets.
 
-There are 3 ways to use the level template, from beginner to advanced:
+There are 2 ways to use the level template:
 
 - Using Github Codespaces
 - Running it locally in a VSCode devcontainer
-- Running it locally outside of a devcontainer
 
 ## Using Github Codespaces
 
@@ -17,7 +16,7 @@ This is the recommeded way for beginners to use the Get Lost level template. You
 !!! note
 
     This method is easiest for beginners, but it's pretty limited for more seasoned
-    developers. If that's you, try the [Local Devcontainer](#local-devcontainer) method instead.
+    developers. If that's you, try the [Local Devcontainer](#local-devcontainer) method instead. You'll get all the benefits of a containerized dev environment, with a much snappier experience.
 
 To get started, [open the level template repo](https://github.com/amoffat/getlost-level-template) and follow the instructions in the README.
 
@@ -31,31 +30,32 @@ If you're not in US-East or US-West, this issue is likely caused by the prebuild
 
 !!! info "Difficulty: medium"
 
-First [create a new repo](https://github.com/amoffat/getlost-level-template) from the level template. Then clone the repo locally as normal.(1)
-{ .annotate }
+First go to the [level template repo](https://github.com/amoffat/getlost-level-template) and click `Use this template`, then `Create a new repository`:
 
-1. We assume you know how to do this!
+![create codespace](./assets/create-codespace.png)
 
-![create repo](../assets/create-codespace.png)
+Name your new repo whatever you want:
 
-Open your locally-cloned repo in VSCode. You should get a popup in the bottom right as VSCode detects that the repo has a devcontainer. When you see it, click `Reopen in Container`:
+![create repo](./assets/new-repo.png)
 
-![open in container](../assets/open-in-container.png)
+Once your new repo is created, clone it locally. We assume you know how to do this!
+
+![clone repo](./assets/clone-repo.png)
+
+After you've cloned the repo locally, open it in VSCode. You should get a popup in the bottom right as VSCode detects that the repo has a devcontainer. When you see it, click `Reopen in Container`:
+
+!!! note
+
+    If you're on WSL2 for Windows, you'll need to make sure that you've activated the WSL integration in Docker Desktop. See [this](https://docs.docker.com/go/wsl2/) for more info.
+
+![open in container](./assets/open-in-container.png)
 
 Now navigate to the `Ports` tab in VSCode and you should see two open ports. One is for playtesting your level (Level Preview) and the other is for using the map editor (Tiled):
 
-![ports](../assets/ports.png)
+![ports](./assets/ports.png)
 
 ### 🚨 Troubleshooting
 
 #### My level preview won't open
 
-If you click the `Open in browser` button on the `Level Preview` port and your browser hangs, check that it is opening as `https://` and not `http://`.
-
-## Bare-metal installation
-
-!!! info "Difficulty: medium"
-
-This is the most advanced installation process because you need to manage the dependencies yourself. There aren't really too many advantages of this method over the local devcontainer.
-
-TODO
+If you click the `Open in browser` button on the `Level Preview` port and your browser hangs, check that it is opening as `https://` and not `http://`. We serve the level preview over https on localhost, which is a little non-standard, but required for how we load assets.
