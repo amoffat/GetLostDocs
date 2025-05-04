@@ -14,6 +14,11 @@ There are 3 ways to use the level template, from beginner to advanced:
 
 This is the recommeded way for beginners to use the Get Lost level template. You don't need anything installed on your computer... just a web browser and a Github account. Github Codespaces is a way to launch VSCode (and other programs) in the browser, so you can do all of your work in the browser without installing anything locally.
 
+!!! note
+
+    This method is easiest for beginners, but it's pretty limited for more seasoned
+    developers. If that's you, try the [Local Devcontainer](#local-devcontainer) method instead.
+
 To get started, [open the level template repo](https://github.com/amoffat/getlost-level-template) and follow the instructions in the README.
 
 ### 🚨 Troubleshooting
