@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://docs.getlost.gg/0.9.0/reference/starting-dev-env/">
       
       
-        <link rel="prev" href="../dialogue/sugarcube/">
+        <link rel="prev" href="../../tutorials/sound/area-sound/">
       
       
         <link rel="next" href="../upgrading/">
@@ -703,94 +703,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../asset-management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ✨ Asset management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    🗣 Dialogue
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            🗣 Dialogue
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dialogue/sugarcube/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ⬜ SugarCube
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -919,15 +831,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bare-metal-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bare-metal installation
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -948,12 +851,100 @@
         
   
   <span class="md-ellipsis">
-    ⏫️ Upgrading
+    ⏫️ Upgrading your level
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✨ Asset management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🗣 Dialogue
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            🗣 Dialogue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dialogue/sugarcube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⬜ SugarCube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1265,15 +1256,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bare-metal-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bare-metal installation
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1295,17 +1277,21 @@
 
 <div><h1 id="starting-development">💻 Starting development</h1>
 <p>Get Lost gives you a level template that you can (and should) use to start building levels quickly. It comes with a premade demo map, some sample level code, and public domain assets.</p>
-<p>There are 3 ways to use the level template, from beginner to advanced:</p>
+<p>There are 2 ways to use the level template:</p>
 <ul>
 <li>Using Github Codespaces</li>
 <li>Running it locally in a VSCode devcontainer</li>
-<li>Running it locally outside of a devcontainer</li>
 </ul>
 <h2 id="using-github-codespaces">Using Github Codespaces</h2>
 <div class="admonition info">
 <p class="admonition-title">Difficulty: easy</p>
 </div>
 <p>This is the recommeded way for beginners to use the Get Lost level template. You don't need anything installed on your computer... just a web browser and a Github account. Github Codespaces is a way to launch VSCode (and other programs) in the browser, so you can do all of your work in the browser without installing anything locally.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is easiest for beginners, but it's pretty limited for more seasoned
+developers. If that's you, try the <a href="#local-devcontainer">Local Devcontainer</a> method instead. You'll get all the benefits of a containerized dev environment, with a much snappier experience.</p>
+</div>
 <p>To get started, <a href="https://github.com/amoffat/getlost-level-template">open the level template repo</a> and follow the instructions in the README.</p>
 <h3 id="troubleshooting">🚨 Troubleshooting</h3>
 <h4 id="the-codespace-takes-forever-to-boot">The codespace takes forever to boot.</h4>
@@ -1314,24 +1300,23 @@
 <div class="admonition info">
 <p class="admonition-title">Difficulty: medium</p>
 </div>
-<p class="annotate">First <a href="https://github.com/amoffat/getlost-level-template">create a new repo</a> from the level template. Then clone the repo locally as normal.(1)</p>
-<ol>
-<li>We assume you know how to do this!</li>
-</ol>
-<p><img alt="create repo" src="../../assets/create-codespace.png"></p>
-<p>Open your locally-cloned repo in VSCode. You should get a popup in the bottom right as VSCode detects that the repo has a devcontainer. When you see it, click <code>Reopen in Container</code>:</p>
-<p><img alt="open in container" src="../../assets/open-in-container.png"></p>
+<p>First go to the <a href="https://github.com/amoffat/getlost-level-template">level template repo</a> and click <code>Use this template</code>, then <code>Create a new repository</code>:</p>
+<p><img alt="create codespace" src="../assets/create-codespace.png"></p>
+<p>Name your new repo whatever you want:</p>
+<p><img alt="create repo" src="../assets/new-repo.png"></p>
+<p>Once your new repo is created, clone it locally. We assume you know how to do this!</p>
+<p><img alt="clone repo" src="../assets/clone-repo.png"></p>
+<p>After you've cloned the repo locally, open it in VSCode. You should get a popup in the bottom right as VSCode detects that the repo has a devcontainer. When you see it, click <code>Reopen in Container</code>:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you're on WSL2 for Windows, you'll need to make sure that you've activated the WSL integration in Docker Desktop. See <a href="https://docs.docker.com/go/wsl2/">this</a> for more info.</p>
+</div>
+<p><img alt="open in container" src="../assets/open-in-container.png"></p>
 <p>Now navigate to the <code>Ports</code> tab in VSCode and you should see two open ports. One is for playtesting your level (Level Preview) and the other is for using the map editor (Tiled):</p>
-<p><img alt="ports" src="../../assets/ports.png"></p>
+<p><img alt="ports" src="../assets/ports.png"></p>
 <h3 id="troubleshooting_1">🚨 Troubleshooting</h3>
 <h4 id="my-level-preview-wont-open">My level preview won't open</h4>
-<p>If you click the <code>Open in browser</code> button on the <code>Level Preview</code> port and your browser hangs, check that it is opening as <code>https://</code> and not <code>http://</code>.</p>
-<h2 id="bare-metal-installation">Bare-metal installation</h2>
-<div class="admonition info">
-<p class="admonition-title">Difficulty: medium</p>
-</div>
-<p>This is the most advanced installation process because you need to manage the dependencies yourself. There aren't really too many advantages of this method over the local devcontainer.</p>
-<p>TODO</p></div>
+<p>If you click the <code>Open in browser</code> button on the <code>Level Preview</code> port and your browser hangs, check that it is opening as <code>https://</code> and not <code>http://</code>. We serve the level preview over https on localhost, which is a little non-standard, but required for how we load assets.</p></div>
 
 
 
