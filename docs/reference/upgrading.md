@@ -6,12 +6,12 @@ Upgrading your level is a key part of level development. It's how you stay up to
 
 ## How engine versioning works
 
-When you create a level from the level template, your level is "soft pinned" (1) to a particular version of the engine. You can find this pinned version by looking in the `/engine_version.txt` file of your repo. This engine version is used by the development environment to know which engine code your level needs to work.
+When you create a level from the level template, your level is "soft pinned" (1) to a particular version of the engine. You can find this pinned version by looking in the `/engine_version.txt` file of your repo. This engine version is used by the development environment to know which engine to load.
 { .annotate }
 
 1. In software development, version pinning is telling the software to only use a specific version of some dependency. This makes the software predictable and less prone to breaking because it will never accidentally use a different version.
 
-Pinning your level to a specific version of the engine means you don't have to worry about changes to the platform breaking your level. You can build it once and forget it, and Get Lost will continue to add features, change things, and it **shouldn't** impact the playability of your level at all.
+Pinning your level to a specific version of the engine means you don't have to worry about changes to the engine breaking your level. You can build it once and forget it, and Get Lost will continue to add features, fix bugs, and it **shouldn't** impact the playability of your level at all.
 
 !!! bug
 
