@@ -30,11 +30,11 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - reference/starting-dev-env.md
+      - reference/upgrading.md
       - reference/asset-management.md
       - 🗣 Dialogue:
           - reference/dialogue/sugarcube.md
-      - reference/starting-dev-env.md
-      - reference/upgrading.md
       - reference/multiverse.md
       - reference/special-layers.md
   - 🎨 Art resources:
