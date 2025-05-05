@@ -3,6 +3,7 @@
 ## 0.10.0 - 5/5/25
 
 - [Reset map tutorial](https://docs.getlost.gg/0.10.0/tutorials/map/resetting/)
+- Mention "unsafe site" in dev env
 
 ## 0.9.0 - 5/3/25
 

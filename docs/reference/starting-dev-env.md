@@ -59,3 +59,7 @@ Now navigate to the `Ports` tab in VSCode and you should see two open ports. One
 #### My level preview won't open
 
 If you click the `Open in browser` button on the `Level Preview` port and your browser hangs, check that it is opening as `https://` and not `http://`. We serve the level preview over https on localhost, which is a little non-standard, but required for how we load assets.
+
+Your browser also might display an "unsafe site" warning. This is because it's hosted as https on localhost, using a self-signed certificate, so the browser has no way of verifying it. There should be an option to proceed anyways and ignore the warning.
+
+![unsafe](./assets/unsafe-dev.png)
