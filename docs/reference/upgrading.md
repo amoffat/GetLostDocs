@@ -48,7 +48,11 @@ Open a terminal and navigate to your level's repo. Then run:
 python3 scripts/upgrade.py
 ```
 
-Once the script completes, you're done!
+Once the script completes, open the command palette with ++ctrl+shift+p++, then type `Rebuild container` and select `Dev Containers: Rebuild Container`:
+
+![Rebuild devcontainer](./assets/rebuild-devcontainer.png)
+
+Now your level should be fully up to date with the latest code and dependencies 🚀
 
 ## Troubleshooting
 
@@ -64,7 +68,7 @@ Once the script completes, you're done!
 
 Sometimes the upgrade script will replace files in `/.devcontainer/` which are used by your development environment. VSCode will usually detect these changes ask if you want to rebuild the container. You'll want to do this, so that your devcontainer is running as intended.
 
-Open the command palette with ++ctrl+shift+p++, then type `Rebuild container` and select `Dev Containers: Rebuild Container`
+Open the command palette with ++ctrl+shift+p++, then type `Rebuild container` and select `Dev Containers: Rebuild Container`:
 
 ![Rebuild devcontainer](./assets/rebuild-devcontainer.png)
 
