@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0 - 5/5/25
+
+- [Reset map tutorial](https://docs.getlost.gg/0.10.0/tutorials/map/resetting/)
+
 ## 0.9.0 - 5/3/25
 
 - Add Docker on Windows note for starting dev env

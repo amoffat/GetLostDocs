@@ -1,15 +1,15 @@
 # 🔄 Resetting the map
 
-If you don't like the default map from the level template, you can reset it.
+!!! warning
 
-With your project open in Tiled, create a new map.
+    Resetting your level will delete your art assets. Reset only when you are sure you want to start with a blank slate.
 
-![new map](./assets/new-map2.png)
+If you know what you're doing, you don't need to use the default map from the level template. To reset your level, go to your VSCode editor and press ++ctrl+shift+b++ to open tasks, then select `Reset Level`.
 
-Now pick the following settings for your map:
+![reset](./assets/reset.png)
 
-!!! note "Feel free to change the tile size if you know what tiles you want to use."
+This will completely erase all of your art assets (tilesets, images, sounds), as well as reset your Tiled level map.
 
-![new map](./assets/new-map-settings.png)
+!!! note
 
-Once the new map opens, save it, and save over the old `level.tmj`.
+    It currently doesn't reset your Twine dialogue. You'll need to reset that yourself.
