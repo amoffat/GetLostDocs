@@ -1,5 +1,9 @@
 # Changelog
 
+##
+
+- Instructions to import story if missing
+
 ## 0.10.0 - 5/5/25
 
 - [Reset map tutorial](https://docs.getlost.gg/0.10.0/tutorials/map/resetting/)

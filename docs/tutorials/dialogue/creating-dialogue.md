@@ -22,7 +22,15 @@ Once your browser tab opens, you should see the Twine interface. You'll see an e
 
 ![twine-level](./creating-dialogue/twine-level.png)
 
-Double click on the story to open it for editing.
+Double-click on the story to open it for editing.
+
+If you don't see the default story, you might need to import it from your level files first. Go to `Library` then `Import`:
+
+![lib-import](./creating-dialogue/lib-import.png)
+
+Click `Choose File` then select your story file from `<your level dir>/level/story/Level.twee`
+
+![import](./creating-dialogue/import.png)
 
 ## 🆕 Add a new passage
 
