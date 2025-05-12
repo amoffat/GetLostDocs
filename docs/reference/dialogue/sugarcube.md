@@ -16,7 +16,7 @@ We support basic if/elseif/else flow control.
 ```
 <<if visited() > 1>>
     Welcome back
-<<else if visited() > 2>>
+<<elseif visited() > 2>>
     You again??
 <<else>>
     Hello
@@ -73,7 +73,7 @@ For variables that you want to apply story-wide, you want to set an initial valu
 
 ## 🧰 Builtin functions
 
-These functions are defined in `assemblyscript/@gl/utils/twine.ts`. You can use them freely throughout your dialogue as either as an expression or as a function call.
+These functions are defined in `.internal/assemblyscript/@gl/utils/twine.ts`. You can use them freely throughout your dialogue as either as an expression or as a function call.
 
 ### `visited()`
 

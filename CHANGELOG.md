@@ -3,6 +3,7 @@
 ##
 
 - Instructions to import story if missing
+- `elseif` not `else if` for Sugarcube
 
 ## 0.10.0 - 5/5/25
 
