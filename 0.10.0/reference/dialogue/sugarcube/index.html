@@ -1428,7 +1428,7 @@
 <p>We support basic if/elseif/else flow control.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;&lt;if visited() &gt; 1&gt;&gt;
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Welcome back
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;&lt;else if visited() &gt; 2&gt;&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;&lt;elseif visited() &gt; 2&gt;&gt;
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    You again??
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;&lt;else&gt;&gt;
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    Hello
@@ -1464,7 +1464,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;&lt;set $gotPassword to false&gt;&gt;
 </span></code></pre></div>
 <h2 id="builtin-functions">🧰 Builtin functions</h2>
-<p>These functions are defined in <code>assemblyscript/@gl/utils/twine.ts</code>. You can use them freely throughout your dialogue as either as an expression or as a function call.</p>
+<p>These functions are defined in <code>.internal/assemblyscript/@gl/utils/twine.ts</code>. You can use them freely throughout your dialogue as either as an expression or as a function call.</p>
 <h3 id="visited"><code>visited()</code></h3>
 <p>Returns the number of times that the player has visited a passage. If no arguments are passed, it assumes the current passage.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;&lt;if visited() &gt; 3&gt;&gt;
