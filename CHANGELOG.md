@@ -1,9 +1,10 @@
 # Changelog
 
-##
+## 0.11.0 - 5/19/25
 
 - Instructions to import story if missing
 - `elseif` not `else if` for Sugarcube
+- Remove recommendation for GH Codespaces
 
 ## 0.10.0 - 5/5/25
 

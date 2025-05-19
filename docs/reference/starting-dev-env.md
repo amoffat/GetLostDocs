@@ -2,33 +2,7 @@
 
 Get Lost gives you a level template that you can (and should) use to start building levels quickly. It comes with a premade demo map, some sample level code, and public domain assets.
 
-There are 2 ways to use the level template:
-
-- Using Github Codespaces
-- Running it locally in a VSCode devcontainer
-
-## Using Github Codespaces
-
-!!! info "Difficulty: easy"
-
-This is the recommeded way for beginners to use the Get Lost level template. You don't need anything installed on your computer... just a web browser and a Github account. Github Codespaces is a way to launch VSCode (and other programs) in the browser, so you can do all of your work in the browser without installing anything locally.
-
-!!! note
-
-    This method is easiest for beginners, but it's pretty limited for more seasoned
-    developers. If that's you, try the [Local Devcontainer](#local-devcontainer) method instead. You'll get all the benefits of a containerized dev environment, with a much snappier experience.
-
-To get started, [open the level template repo](https://github.com/amoffat/getlost-level-template) and follow the instructions in the README.
-
-### 🚨 Troubleshooting
-
-#### The codespace takes forever to boot.
-
-If you're not in US-East or US-West, this issue is likely caused by the prebuild cache not being available in your region. The codespace prebuild cache is something that I have to turn on manually per-region, and it accelerates the startup time, at a small cost to me. If you wait long enough, the codespace will boot. However, you can request your region be enabled in our [Discord](https://discord.gg/v4AAezkSEu).
-
-## Local Devcontainer
-
-!!! info "Difficulty: medium"
+## Load your local Devcontainer
 
 First go to the [level template repo](https://github.com/amoffat/getlost-level-template) and click `Use this template`, then `Create a new repository`:
 
@@ -39,6 +13,10 @@ Name your new repo whatever you want:
 ![create repo](./assets/new-repo.png)
 
 Once your new repo is created, clone it locally. We assume you know how to do this!
+
+!!! note
+
+    Using Github Codespaces are not recommended for the Get Lost development environment. Always clone the repo locally instead of opening it in a Codespace.
 
 ![clone repo](./assets/clone-repo.png)
 
