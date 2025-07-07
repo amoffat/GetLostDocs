@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.2 - 7/6/25
+
+- Make "Play" button live
+- Vision tweak
+
 ## 0.11.0 - 5/19/25
 
 - Instructions to import story if missing

@@ -6,7 +6,7 @@
 
 Are you here by mistake and just want to play Get Lost?
 
-[Play (Coming soon) :material-gamepad:](#){ .md-button }
+[Play Get Lost :material-gamepad:](https://getlost.gg){ .md-button }
 
 ## New to Get Lost?
 

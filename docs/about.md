@@ -7,7 +7,7 @@ Get Lost is an engine, a platform, and a web game. The goal is to make it easy f
 
 ## ✨ The vision
 
-The vision of Get Lost is to connect creative people in a new way, using a collaborative game, to create a rich experience for players.
+The vision of Get Lost is to connect creative people in a new way, using a collaborative game, to create rich, continually-evolving experiences for players.
 { .annotate }
 
 ## ✅ What it is
