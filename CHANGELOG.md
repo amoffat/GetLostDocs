@@ -1,9 +1,10 @@
 # Changelog
 
-## 0.16.2 - 7/6/25
+## 0.16.2 - 7/7/25
 
 - Make "Play" button live
 - Vision tweak
+- Basic Assemblyscript api docs
 
 ## 0.11.0 - 5/19/25
 
