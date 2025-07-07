@@ -30,6 +30,7 @@ nav:
           - tutorials/sound/walk-sound.md
           - tutorials/sound/area-sound.md
   - 📚 Reference:
+      - reference/api.md
       - reference/starting-dev-env.md
       - reference/upgrading.md
       - reference/asset-management.md
