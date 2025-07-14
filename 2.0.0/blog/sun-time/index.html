@@ -1406,14 +1406,12 @@
 <p>The Get Lost engine aims to be an expressive storytelling platform within the domain of 2.5D pixel games. One way the engine supports this goal is by giving level designers an automatic day and night cycle that is synced with the player's physical location in the real world.</p>
 <p><div class="video-container"><video style="width:100%" loop muted controls autoplay alt="type:video"><source src="../sun-time-assets/day-night.mp4" type="video/mp4"></source></video></div></p>
 <p><a class="md-button" href="https://getlost.gg/994021540/main">Play this level <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m16.5 9-3 3 3 3H22V9M9 16.5V22h6v-5.5l-3-3M7.5 9H2v6h5.5l3-3M15 7.5V2H9v5.5l3 3z"></path></svg></span></a></p>
-<p>This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing the player's interactions. The engine does this by re-shading the art assets in real time with WebGL.
-To do this re-shading, it needs three things:</p>
+<p>This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing the player's interactions. The engine does this by re-shading the art assets in real time with WebGL. To do this re-shading, it needs two things:</p>
 <ol>
-<li>The sun's position</li>
 <li>A rough physical location of the player.</li>
 <li>The current datetime of the player.</li>
 </ol>
-<p>To accurately get the sun's position, I rely on the incredible <a href="https://www.npmjs.com/package/suncalc">suncalc</a> library by <a href="https://agafonkin.com/">Volodymyr Agafonkin</a>. It does all of the heavy lifting involved with determining an accurate sun position:</p>
+<p>From these, we can derive the sun's position using the incredible <a href="https://www.npmjs.com/package/suncalc">suncalc</a> library by <a href="https://agafonkin.com/">Volodymyr Agafonkin</a>. It does all of the heavy lifting involved with determining an accurate sun position:</p>
 <figure>
 <img alt="earth tilt" src="../sun-time-assets/earth-tilt.webp">
 <br>
