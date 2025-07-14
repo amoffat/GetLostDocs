@@ -36,8 +36,8 @@ nav:
       - reference/asset-management.md
       - 🗣 Dialogue:
           - reference/dialogue/sugarcube.md
-      - reference/multiverse.md
       - reference/special-layers.md
+      - reference/security.md
   - 🎨 Art resources:
       - art-assets/tilesets.md
       - art-assets/sound-effects.md
@@ -79,6 +79,7 @@ theme:
         name: Switch to dark mode
 
 plugins:
+  - social
   - mkdocs-video:
       is_video: True
       video_muted: True

@@ -1,16 +1,26 @@
-# 🌅 Estimating the player's sunrise
+---
+title: Guessing the player's sunrise
+description: An unobtrusive method of estimating a user's geographic location.
+social:
+  cards_layout_options:
+    background_color: blue # Change background color
+    background_image: null # Remove background image
+---
 
-The Get Lost engine aims to be a creative storytelling platform within the domain of 2.5D pixel games. One way the engine supports this goal is by giving level designers an automatic day and night cycle that is synced with the player's location.
+# :sunrise: Guessing the player's sunrise
+
+The Get Lost engine aims to be an expressive storytelling platform within the domain of 2.5D pixel games. One way the engine supports this goal is by giving level designers an automatic day and night cycle that is synced with the player's physical location in the real world.
 
 ![type:video](./sun-time-assets/day-night.mp4)
 
 [Play this level :material-gamepad:](https://getlost.gg/994021540/main){ .md-button }
 
-This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing what the player can do. The engine does this by re-shading the art assets in real time with WebGL.
-To do this re-shading, it needs two things:
+This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing the player's interactions. The engine does this by re-shading the art assets in real time with WebGL.
+To do this re-shading, it needs three things:
 
-1. The sun's position, as a function of the player's location and datetime.
-1. A rough geographic location of the player.
+1. The sun's position
+1. A rough physical location of the player.
+1. The current datetime of the player.
 
 To accurately get the sun's position, I rely on the incredible [suncalc](https://www.npmjs.com/package/suncalc) library by [Volodymyr Agafonkin](https://agafonkin.com/). It does all of the heavy lifting involved with determining an accurate sun position:
 
@@ -19,7 +29,7 @@ To accurately get the sun's position, I rely on the incredible [suncalc](https:/
   <figcaption>The sunrise and sunset times can be drastically different depending on location and date.</figcaption>
 </figure>
 
-For a given latitude, longitude, and datetime, `suncalc` can return the sun's altitude and azimuth. From this, we can derive colors to blend with the art assets in a shader.
+For a given latitude, longitude, and datetime, `suncalc` returns the sun's altitude and azimuth. From this, we can derive colors to blend with the art assets in the game.
 
 <figure markdown="span">
 ![sun pos](./sun-time-assets/sun-pos.jpg)
@@ -34,7 +44,7 @@ Originally, I was going to use the [Geolocation Web API](https://developer.mozil
 
 <figure markdown="span">
   ![permission](./sun-time-assets/permission.jpg)
-  <figcaption>The permission request is intrusive and can be denied, requiring a fallback solution regardless.</figcaption>
+  <figcaption>The permission request is intrusive and requires a fallback solution if denied.</figcaption>
 </figure>
 
 This permission request UI presents flow challenges that I would prefer to avoid, and since I would need a fallback solution anyways, I opted for a less invasive approach: timezone + locale + static population data.
@@ -53,16 +63,16 @@ And these estimated coordinates can then be further refined by weighing towards 
   <figcaption>Population density improves the location estimation</figcaption>
 </figure>
 
-For example, a player in timezone `America/New_York` with a locale of `en-US` is more likely to be close to NYC, since there's more people there. However, if the locale is `es-PE`, they're more likely to be close to Lima, Peru. In this extreme example, this can account for nearly a 3 hour difference in sunset time:
+For example, a player in timezone `America/New_York` with a locale of `en-US` is more likely to be close to NYC, since there's more people there. However, if the locale is `es-PE`, they're more likely to be close to Lima, Peru. In this extreme example, the difference in locale can account for nearly a 3 hour difference in sunset time:
 
 <figure markdown="span">
   ![permission](./sun-time-assets/time-diff.png)
   <figcaption>Accounting for locale can improve our accuracy significantly.</figcaption>
 </figure>
 
-Once the basic process was mapped out, the next step was building the data structures to do the required lookups.
+Assuming the basic idea is sound, the next step is building the data structures to do the required lookups.
 
-## 🤔 Reasoning-assisted development
+## 🦾 Reasoning-assisted development
 
 ChatGPT's o3 model was very helpful in estimating the data required bring this together. I suspected that the full problem would probably be too much for it to accomplish in one pass, so I decided to break the problem down into two discrete chunks:
 
@@ -156,15 +166,15 @@ export function estimateLocation(): [number, number] {
 }
 ```
 
-Now I have geolocation data that can be fed into `suncalc`.
+Combining this rough geolocation data with `suncalc` completes the feature and allows a for good-enough representation of the real world sun position for the player.
 
-## Thoughts
+## 🤔 Thoughts
 
-ChatGPT's o3 model really accelerated shipping this feature. While I could have done the work without it, it would have been very tedious, taken much longer, and likely also have errors. Two things stand out to me when using a reasoning model:
+ChatGPT's o3 model accelerated shipping this feature. While I could have done the work without it, it would have been very tedious, taken much longer, and likely also have more errors. Two things stood out to me while building this feature:
 
-### Spot checking
+### 🔎 Spot checking
 
-Having a process for spot checking the reasoning is important. For example, one of the locale coordinates it gave for `pa-IN` did not fall within the `Europe/London` timezone. I was able to identify this error because I knew the longitude values should all be clustered. Had I not had this insight, I very well could have missed it:
+Having a process for spot checking the reasoning is important. For example, one of the locale coordinates it gave for `pa-IN` did not fall within the `Europe/London` timezone. I was able to identify this error because I knew the longitude values should all be clustered. Had I not had this insight, I likely would have missed it:
 
 ```typescript
   "Europe/London": {
@@ -177,12 +187,12 @@ Having a process for spot checking the reasoning is important. For example, one 
   },
 ```
 
-### Breaking apart problems
+### 🧩 Breaking apart the problem
 
-Splitting larger problems into self-contained subproblems is still a critical human skill that helps reasoning-assisted development reach its full potential. The more conceptual space a reasoning session covers, the higher the chance for mistakes. And because every conclusion downstream of a mistake is also tainted (garbage in, garbage out), mistakes in reasoning are compounded.
+Splitting larger problems into self-contained subproblems is still a critical human skill that helps reasoning-assisted development reach its full potential. The more conceptual space a reasoning session covers, the higher the chance for mistakes. And because every conclusion downstream of a mistake is also tainted (garbage in, garbage out), mistakes in reasoning compound.
 
 Try to keep the reasoning sessions short and directed, and have a clear plan for migrating the output of one session into the input of the next session.
 
 !!! tip "Get involved!"
 
-    Did you enjoy this post? Do you like games and decentralized creative collaboration? Please consider getting involved in [Get Lost](https://docs.getlost.gg/latest/about/), either as a player or a creator.
+    Did you enjoy this post? Do you like gaming and decentralized creative collaboration? Please consider getting involved in [Get Lost](../about.md), either as a player or a creator.

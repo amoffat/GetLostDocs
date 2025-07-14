@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0 - 7/14/25
+
+- Sun blog post
+- Social cards
+- More FAQ
+- Security page
+- Too many changes
+
 ## 0.16.2 - 7/7/25
 
 - Make "Play" button live

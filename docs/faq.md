@@ -2,7 +2,7 @@
 
 ## Can my level be monetized?
 
-Yes. Monetized levels get paid out through Stripe.
+Yes, eventually.
 
 ## Will there be multiplayer?
 
@@ -14,8 +14,18 @@ No. There is no place for crypto in Get Lost.
 
 ## Can I make a shooter/platformer/puzzler/etc in Get Lost?
 
-The engine is flexible but opinionated. You can make levels with different mechanics, but the further you stray from telling stories, the more difficult it will be to make. The engine is really designed to tell stories, so if you go with that, you'll have the least amount of friction.
+The engine is flexible but opinionated. You can make levels with different mechanics, but it's mostly for you to tell stories and provide experiences around exploration and secrets.
 
 ## Can I make a level with AI?
 
-You can try, but I don't think you'll get very far. Making a level still requires you to have spatial and visual skills to lay out tiles and setup sensors. If you do manage to make a level with AI, there's a good chance it will be voted down by players due to it feeling inauthentic.
+You can try, but you probably won't get very far. Making a level requires you to have spatial and visual skills to lay out tiles and setup sensors. Beyond that, authenticity is king. Players want experiences that are hand-crafted and unique.
+
+## Is Get Lost safe/secure?
+
+Read about the security [here.](./reference/security.md)
+
+## How do I make a level?
+
+Currently the absolute best way to learn to make a level is to learn from an existing level. If you see a level you like, click "Edit level", fork the Github repo, and start playing around with it.
+
+![edit level](./assets/edit-level.png)

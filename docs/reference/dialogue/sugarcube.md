@@ -1,6 +1,6 @@
 # ⬜ SugarCube
 
-For [dialogue written with Twine](../tutorials/dialogue/creating-dialogue.md), Get Lost supports a very limited subset of the [`SugarCube`](https://www.motoslave.net/sugarcube/2/docs/) story format.(1)
+For [dialogue written with Twine](../../tutorials/dialogue/creating-dialogue.md), Get Lost supports a very limited subset of the [`SugarCube`](https://www.motoslave.net/sugarcube/2/docs/) story format.(1)
 { .annotate }
 
 1. A story format is what Twine calls a text templating language. There are several story formats that it supports, but Get Lost only supports SugarCube.
