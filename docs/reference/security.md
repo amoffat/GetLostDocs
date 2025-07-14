@@ -9,9 +9,11 @@ The tl;dr about level code is this:
 - Strict CSP (Content Security Policy) on all pages locks down functionality
 - Level code changes can only be made from a public Github repository
 
+No technology is perfect, and there are likely still flaws, but this setup should reduce the number of possible attacks significantly.
+
 !!! warning
 
-    If you do discover what you believe to be a security flaw in Get Lost, please report it by opening an issue [here](https://github.com/amoffat/getlost-level-template/issues)
+    If you are a 1337 h4x0r and you do discover what you believe to be a security flaw in Get Lost, please report it by opening an issue [here](https://github.com/amoffat/getlost-level-template/issues). If the flaw is egregious enough, we'll include your name in the game's credits.
 
 ## The level code
 
@@ -27,7 +29,7 @@ This makes the attack surface very small by default.
 
 ### DoS attacks
 
-In theory a malicious level could create an infinite loop that never yields, so the WASM vm would never return control to the javascript host. This would be annoying for players. However, in practice, because the engine iframe is sandboxed, it runs in a different UI thread, meaning the player can still "skip" to the next level if the current level hangs indefinitely.
+In theory a malicious level could create an infinite loop so the WASM vm never yields control back to the javascript host. This would be annoying for players. However, in practice, because the engine iframe is sandboxed, it runs in a different UI thread, meaning the player can still "skip" to the next level if the holding the current level hangs indefinitely.
 
 ## The engine sandbox
 

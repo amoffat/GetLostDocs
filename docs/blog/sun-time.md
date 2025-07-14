@@ -193,6 +193,6 @@ Splitting larger problems into self-contained subproblems is still a critical hu
 
 Try to keep the reasoning sessions short and directed, and have a clear plan for migrating the output of one session into the input of the next session.
 
-!!! tip "Get involved!"
+!!! tip "Join us"
 
     Did you enjoy this post? Do you like gaming and decentralized creative collaboration? Please consider getting involved in [Get Lost](../about.md), either as a player or a creator.
