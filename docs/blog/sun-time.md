@@ -15,14 +15,12 @@ The Get Lost engine aims to be an expressive storytelling platform within the do
 
 [Play this level :material-gamepad:](https://getlost.gg/994021540/main){ .md-button }
 
-This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing the player's interactions. The engine does this by re-shading the art assets in real time with WebGL.
-To do this re-shading, it needs three things:
+This makes a player's experience more immersive; if they play at night, the level is at night, changing the vibe and potentially changing the player's interactions. The engine does this by re-shading the art assets in real time with WebGL. To do this re-shading, it needs two things:
 
-1. The sun's position
 1. A rough physical location of the player.
 1. The current datetime of the player.
 
-To accurately get the sun's position, I rely on the incredible [suncalc](https://www.npmjs.com/package/suncalc) library by [Volodymyr Agafonkin](https://agafonkin.com/). It does all of the heavy lifting involved with determining an accurate sun position:
+From these, we can derive the sun's position using the incredible [suncalc](https://www.npmjs.com/package/suncalc) library by [Volodymyr Agafonkin](https://agafonkin.com/). It does all of the heavy lifting involved with determining an accurate sun position:
 
 <figure markdown="span">
 ![earth tilt](./sun-time-assets/earth-tilt.webp)
