@@ -17,6 +17,8 @@ extra:
 nav:
   - 🏠 Home: index.md
   - 🎓 Tutorials:
+      - 👨‍💻 Code:
+          - tutorials/code/learning.md
       - 🗺️ Map:
           - tutorials/map/resetting.md
       - 🍎 Physics:
@@ -33,6 +35,7 @@ nav:
       - reference/api.md
       - reference/starting-dev-env.md
       - reference/upgrading.md
+      - reference/markers.md
       - reference/asset-management.md
       - 🗣 Dialogue:
           - reference/dialogue/sugarcube.md

@@ -25,6 +25,33 @@ We support basic if/elseif/else flow control.
 
 Flow control can also be nested for complex branching.
 
+!!! warning
+
+    You can't have some text outside of `<<if/else>>` and some text inside of `<<if/else>>`. All of your visible text must be inside these branches or all of it outside. You cannot mix and match.
+
+    For example, **this will not work:**
+
+    ```
+    Hello,
+    <<if level.isFriend >>
+    friend.
+    <<else>>
+    foe.
+    <</if>>
+    ```
+
+    It will discard the `Hello` completely, because it is outside of the flow control. The correct way:
+
+    ```
+    <<if level.isFriend >>
+    Hello, friend.
+    <<else>>
+    Hello, foe.
+    <</if>>
+    ```
+
+    Basically, if a branch evaluates, that's what gets displayed, and anything else is discarded.
+
 ## 🔡 Variables
 
 A variable can be set in _any_ passage, like this:
@@ -87,7 +114,7 @@ Returns the number of times that the player has visited a passage. If no argumen
 
 !!! warning
 
-    It is counter-intuitive, but `visited()` will always return 1, not 0, the first time you visit the passage.
+    It is counter-intuitive, but `visited()` will always return 1, not 0, the first time you visit the passage. `hasVisited()` might be what you're looking for instead.
 
 ### `hasVisited()`
 
@@ -123,13 +150,31 @@ Returns a random integer between min and max, inclusive.
 
 Returns a random float between min and max, inclusive.
 
+### `recordMarker(name)`
+
+Records a marker that can be used in your level or other levels. You can set it in a passage directly, and it will evaluate if that passage is reached in conversation:
+
+```
+Why did you lie to me?
+
+<<recordMarker("lied")>>
+```
+
+Or you can call it conditionally, if some other criteria are met:
+
+```
+<<if visited() > 3>>
+    <<recordMarker("persistent")>>
+<</if>>
+```
+
 ### `exit(exitName, force=false)`
 
 Exits the map, using the exit `exitName`. If `force` is false, the player will be given the option to exit. If `force` is true, they will not.
 
-## 🎒 Level functions
+## 🎒 Level data
 
-Your SugarCube code can also call functions defined in your level's `main.ts` file. To call these functions, just prefix your call with `level`. For example:
+Your SugarCube code can also call functions and access exports defined in your level's `main.ts` file. To call these functions, just prefix your call with `level`. For example:
 
 ```
 <<if level.isCorrect($answer)>>
