@@ -4,7 +4,9 @@
   "remoteEnv": {
     "DEVCONTAINER": "true"
   },
-  "forwardPorts": [8000],
+  "forwardPorts": [
+    8000
+  ],
   "customizations": {
     "vscode": {
       "settings": {
@@ -30,7 +32,6 @@
     }
   },
   "onCreateCommand": "bash .devcontainer/hooks/onCreate.sh",
-  "updateContentCommand": "bash .devcontainer/hooks/updateContent.sh",
   "postAttachCommand": "bash .devcontainer/hooks/postAttach.sh",
   "postStartCommand": "bash .devcontainer/hooks/postStart.sh",
   "postCreateCommand": "bash .devcontainer/hooks/postCreate.sh"

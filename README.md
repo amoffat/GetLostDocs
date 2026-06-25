@@ -8,8 +8,8 @@ https://docs.getlost.gg
 
 The instructions below are only if you want to edit this documentation. It is not necessary to do these steps if you just want to build levels.
 
-- Create a python virtual env and activate it
-- Install deps with `pip install -r requirements.txt`
+- Install uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Install deps with `uv sync`
 - Start the dev server with `mkdocs serve` to serve the current version, or `mike serve` to serve all versions with the version dropdown.
 - Make changes to markdown files
 

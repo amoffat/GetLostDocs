@@ -5,4 +5,7 @@ set -eux
 sudo apt-get update
 sudo apt-get install --yes libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
 
-pip install -r requirements.txt
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source "$HOME/.local/bin/env"
+
+uv sync
