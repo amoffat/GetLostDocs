@@ -2,6 +2,12 @@
 
 Welcome to the Get Lost platform dev documentation. This will serve as your reference for all things required to build and publish levels to the Get Lost platform.
 
+!!! warning
+
+    DO NOT USE THESE DOCS. You cannot build a Get Lost level with them. There is a new editor that is nearing completion that integrates all of the disparate tools previously required to build a level. This unified Get Lost level editor is talked about [here](https://x.com/GetLostTheGame/status/1981490357608292633)
+
+    The editor is planned to be complete by August 2026, at which point these docs will be rewritten and this notice will be removed.
+
 ## Just want to play?
 
 Are you here by mistake and just want to play Get Lost?
